@@ -1,0 +1,37 @@
+{
+    "WSConnectionTest": {
+        "class": "src.tests.wstests.WSConnectionTest.WSConnectionTest",
+        "lib": "src.testlibs.baseWSTestLib.BaseWSTestLib",
+        "testParamsKey": "WSConnectionTestParam"
+    },
+    "WSConnection100IterTest": {
+        "class": "src.tests.wstests.WSConnectionTest.WSConnectionTest100Iter",
+        "lib": "src.testlibs.baseWSTestLib.BaseWSTestLib",
+        "testParamsKey": "WSConnectionTestParam"
+    },
+    "WSConnection100ConcurrentTest": {
+        "class": "src.tests.wstests.ConcurrentWSConnectionTest.WSConnectionConcurrentTest",
+        "lib": "src.testlibs.baseWSTestLib.BaseWSTestLib",
+        "testParamsKey": "WSConnectionConcurrentTestParam"
+    },
+    "WSConnection1000ConcurrentTest": {
+        "class": "src.tests.wstests.ConcurrentWSConnectionTest.WSConnectionConcurrentTest",
+        "lib": "src.testlibs.baseWSTestLib.BaseWSTestLib",
+        "testParamsKey": "WSConnection1000ConcurrentTestParam"
+    },
+    "WSConnection1000Concurrent100IterationsTest": {
+        "class": "src.tests.wstests.ConcurrentWSConnectionTest.WSConnectionConcurrentTest",
+        "lib": "src.testlibs.baseWSTestLib.BaseWSTestLib",
+        "testParamsKey": "WSConnection1000Concurrent100IterationsTestParam"
+    },
+    "WSAuthTest": {
+        "class": "src.tests.wstests.WSAuthTest.WSAuthTest",
+        "lib": "src.testlibs.baseWSTestLib.BaseWSTestLib",
+        "testParamsKey": "WSAuthTestParam"
+    },
+    "WSAuth100ConcurrentTest": {
+        "class": "src.tests.wstests.WSAuthTest.WSAuthTest",
+        "lib": "src.testlibs.baseWSTestLib.BaseWSTestLib",
+        "testParamsKey": "WSAuth100ConcurrentTestParam"
+    }
+}

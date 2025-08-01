@@ -1,0 +1,20 @@
+{
+    "authentication": {
+        "type": "authentication",
+        "data": {
+            "authentication": "Bearer {0}"
+        }
+    },
+    "auth_success": {
+        "type": "authentication",
+        "data": {
+            "authentication": "Success"
+        }
+    },
+    "connected": {
+        "type": "connected"
+    },
+    "update": {
+        "type": "update"
+    }
+}

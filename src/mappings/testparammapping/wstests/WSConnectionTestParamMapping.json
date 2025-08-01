@@ -1,0 +1,50 @@
+{
+    "WSConnectionTestParam": {
+        "url": "ws://localhost:8000/project/stream/1203/"
+    },
+    "WSConnectionConcurrentTestParam": {
+        "Inherits": "WSConnectionTestParam"
+    },
+    "WSConnection1000ConcurrentTestParam": {
+        "Inherits": "WSConnectionConcurrentTestParam",
+        "concurrent": 100
+    },
+    "WSConnection1000Concurrent100IterationsTestParam": {
+        "Inherits": "WSConnection1000ConcurrentTestParam",
+        "concurrent": 1000,
+        "iterations": 100
+    },
+    "WSAuthTestParam": {
+        "Inherits": "WSConnection1000ConcurrentTestParam",
+        "concurrent": 1,
+        "iterations": 1,
+        "steps": [
+            {
+                "recv": {
+                    "template": "connected",
+                    "expect": "1"
+                }
+            },
+            {
+                "send": {
+                    "template": "authentication",
+                    "params": ["{client_token}"]
+                },
+                "recv": {
+                    "template": "auth_success",
+                    "expect": "1"
+                }
+            },
+            {
+                "recv": {
+                    "template": "update",
+                    "expect": "1"
+                }
+            }
+        ]
+    },
+    "WSAuth100ConcurrentTestParam": {
+        "Inherits": "WSAuthTestParam",
+        "concurrent": 100
+    }
+}
